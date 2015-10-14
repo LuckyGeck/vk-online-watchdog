@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
 if [ -z "$1" ]; then
-    echo "Usage: $0 <vk_id>"
+    echo "Usage: $0 <vk_id>" 1>&2
     exit 1
 fi
 
-function notify
-{
+notify() {
     TEXT="offline"
     if [ "$2" -ne 0 ]
     then
